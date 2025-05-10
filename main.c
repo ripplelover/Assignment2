@@ -125,5 +125,5 @@ void timecmp() {
     int total_sec2 = time2->tm_hour * 3600 + time2->tm_min * 60 + time2->tm_sec;
     if (total_sec1 < total_sec2) printf("%s is early\n\n", text1);
     else if (total_sec1 > total_sec2) printf("%s is early\n\n", text2);
-    else printf("times are equal\n\n");
+    else printf("same time\n\n");
 }
