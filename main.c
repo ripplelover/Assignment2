@@ -5,7 +5,7 @@
 #include <time.h>
 
 struct stat stat1, stat2;
-struct tm *time1, *time2;
+struct tm* time1, * time2;
 
 const char* text1 = "text1";
 const char* text2 = "text2";
@@ -19,7 +19,7 @@ void blockcmp();
 void datecmp();
 void timecmp();
 
-int main(){
+int main() {
     filestat1();
     filestat2();
     filetime1();
@@ -83,33 +83,35 @@ void blockcmp(){
 }
 
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
-void datecmp() {
+void datecmp(){
+    printf("date compare\n");
     if (time1->tm_mon < time2->tm_mon)
-        printf("text1 is early\n");
+        printf("text1 is early\n\n");
     else if (time1->tm_mon > time2->tm_mon)
-        printf("text2 is early\n");
+        printf("text2 is early\n\n");
     else {
         if (time1->tm_mday < time2->tm_mday)
-            printf("text1 is early\n");
+            printf("text1 is early\n\n");
         else if (time1->tm_mday > time2->tm_mday)
-            printf("text2 is early\n");
+            printf("text2 is early\n\n");
         else
-            printf("same date\n");
+            printf("same date\n\n");
     }
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
-void timecmp() {
+void timecmp(){
+    printf("time compare\n");
     if (time1->tm_hour < time2->tm_hour)
-        printf("text1 is early\n");
+        printf("text1 is early\n\n");
     else if (time1->tm_hour > time2->tm_hour)
-        printf("text2 is early\n");
+        printf("text2 is early\n\n");
     else {
         if (time1->tm_min < time2->tm_min)
-            printf("text1 is early\n");
+            printf("text1 is early\n\n");
         else if (time1->tm_min > time2->tm_min)
-            printf("text2 is early\n");
+            printf("text2 is early\n\n");
         else
-            printf("same time\n");
+            printf("same time\n\n");
     }
 }
