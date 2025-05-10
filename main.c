@@ -37,7 +37,7 @@ void filestat1(){
 
 //파일 2의 정보를 가져오는 함수 작성
 void filestat2(){
-    
+    if (stat(text2, &stat2) == -1) perror("stat2");
 }
 
 //파일 1의 시간 정보를 가져오는 함수 작성
@@ -52,13 +52,7 @@ void filetime2(){
 
 //두 개의 파일 크기를 비교하는 함수 작성
 void sizecmp(){
-    printf("size compare\n");
-    if (stat1.st_size > stat2.st_size)
-        printf("%s is bigger\n\n", text1);
-    else if (stat1.st_size < stat2.st_size)
-        printf("%s is bigger\n\n", text2);
-    else
-        printf("sizes are equal\n\n");
+
 }
 
 //두 개의 파일 블락 수를 비교하는 함수 작성
