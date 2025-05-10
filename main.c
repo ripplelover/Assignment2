@@ -30,21 +30,21 @@ int main(){
     timecmp();
 }
 
-// 파일 1의 정보를 가져오는 함수
+// 파일 1의 정보를 가져오는 함수 작성
 void filestat1(){
     if (stat(text1, &stat1) == -1) {
         perror("Failed to get stat for text1");
     }
 }
 
-// 파일 2의 정보를 가져오는 함수
+// 파일 2의 정보를 가져오는 함수 작성
 void filestat2(){
     if (stat(text2, &stat2) == -1) {
         perror("Failed to get stat for text2");
     }
 }
 
-// 파일 1의 시간 정보를 가져오는 함수
+// 파일 1의 시간 정보를 가져오는 함수 작성
 void filetime1(){
     time1 = localtime(&stat1.st_mtime);
     if (time1 == NULL) {
@@ -52,7 +52,7 @@ void filetime1(){
     }
 }
 
-// 파일 2의 시간 정보를 가져오는 함수
+// 파일 2의 시간 정보를 가져오는 함수 작성
 void filetime2(){
     time2 = localtime(&stat2.st_mtime);
     if (time2 == NULL) {
@@ -60,7 +60,7 @@ void filetime2(){
     }
 }
 
-// 두 개의 파일 크기를 비교하는 함수
+// 두 개의 파일 크기를 비교하는 함수 작성
 void sizecmp(){
     printf("size compare\n");
     if (stat1.st_size > stat2.st_size)
@@ -71,7 +71,7 @@ void sizecmp(){
         printf("sizes are equal\n\n");
 }
 
-// 두 개의 파일 블럭 수를 비교하는 함수
+// 두 개의 파일 블락 수를 비교하는 함수 작성
 void blockcmp(){
     printf("block compare\n");
     if (stat1.st_blocks > stat2.st_blocks)
